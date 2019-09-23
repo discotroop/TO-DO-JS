@@ -1,5 +1,9 @@
 import {test} from "./app.js";
-
+import {getToDos} from "./app.js";
+import {renderToDos} from "./render.js";
 test();
-
-console.log("index test");
+test();
+test();
+// getToDos();
+console.log(getToDos());
+console.log(renderToDos(getToDos()));
