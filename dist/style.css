@@ -1,0 +1,49 @@
+.todo {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.todo:hover {
+    background-color: #DECAB0;
+    border-radius: 25px;
+}
+
+.check {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: darkgray;
+    background-color: white;
+    margin: 7px;
+}
+
+.check:hover {
+    background-color: lightsteelblue;  
+    border-color: black;
+}
+
+
+
+#colorReference {
+    /* FROM: https://www.htmlcsscolor.com/hex/B0C4DE */
+    /* triadic */
+    background-color: #DEB0C4;
+    background-color: #C4DEB0;
+
+    /* analogous */
+    background-color: #B3B0DE;
+    background-color: #B0DBDE;
+
+    /* split complements */
+    background-color: #DEB3B0;
+    background-color: #DBDEB0;
+
+    /* Complementary */
+    background-color: #DECAB0;
+
+}

@@ -1,4 +1,8 @@
-let todos = [];
+let todos = ["todo one", "todo two", "todo three"];
+export function getToDos () {
+    let currentTodos = todos;
+    return currentTodos;
+}
 
 export function test() {
     function getTitle() {
@@ -40,10 +44,6 @@ export function test() {
     console.log(Date.now());
     console.log(todos);
     return todos.push(createToDo());
-}
-
-export function getToDos () {
-    return todos;
 }
 
 

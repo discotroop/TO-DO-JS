@@ -1,9 +1,21 @@
-export function renderToDos(todos) {
-    let content = document.querySelector("#content"); 
-    todos.forEach(function(todo) {
-        let para = document.createElement("p");
-        para.innerText = todo.title;
-        content.appendChild(para);
-    })
 
+export function renderToDos() {
+    let todos = ["1", "2", "3"];
+    let todoList = document.querySelector("#todoList");
+
+    function createTodoElement () {
+        let todo = document.createElement("div");
+        todo.setAttribute("class", "todo");
+        let check = document.createElement("div");
+        check.setAttribute("class", "check");
+        todo.append(check);
+        return todo;
+    }
+
+    for (let i = 0; i < todos.length; i++) {
+        let todo = createTodoElement();
+        let todoText = todos[i];
+        todo.append(todoText);
+        todoList.appendChild(todo)
+    }
 }

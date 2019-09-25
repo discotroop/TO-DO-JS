@@ -74,6 +74,7 @@ export function drawApp() {
     
     /* draw todos Container */ 
     let todosContainer = document.createElement("div");
+    todosContainer.id = "todoList";
     container.appendChild(todosContainer);
 
     let todosHeader = document.createElement("div");
