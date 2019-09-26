@@ -1,10 +1,12 @@
 let todos = ["todo one", "todo two", "todo three"];
+
 export function getToDos () {
     let currentTodos = todos;
+    console.log(currentTodos);
     return currentTodos;
 }
 
-export function test() {
+export function buildToDo() {
     function getTitle() {
         console.log("title test");
     }
