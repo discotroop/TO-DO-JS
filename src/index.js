@@ -1,11 +1,10 @@
 import{drawApp} from "./initial.js";
 drawApp();
-import {buildToDo} from "./app.js";
-import {getToDos} from "./app.js";
 import {renderToDos} from "./render.js";
 
-let todos = ["1", "2", "3"];
+import{app} from "./app.js"
 
-renderToDos(getToDos());
-
-getToDos();
+let todos = app.todos;
+renderToDos(todos);
+app.todos.push("test");
+renderToDos(todos);

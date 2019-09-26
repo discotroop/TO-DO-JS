@@ -1,8 +1,11 @@
+let todos = ["4", "5", "6"];
+
 
 export function renderToDos(currentTodos) {
     // let todos = ["1", "2", "3"];
     let todos = currentTodos;
     let todoList = document.querySelector("#todoList");
+    todoList.innerHTML = "";
 
     function createTodoElement () {
         let todo = document.createElement("div");

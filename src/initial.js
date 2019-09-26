@@ -74,7 +74,6 @@ export function drawApp() {
     
     /* draw todos Container */ 
     let todosContainer = document.createElement("div");
-    todosContainer.id = "todoList";
     container.appendChild(todosContainer);
 
     let todosHeader = document.createElement("div");
@@ -87,6 +86,10 @@ export function drawApp() {
     let todosButton = document.createElement("button");
     todosButton.innerText = "New";
     todosHeader.appendChild(todosButton);
+
+    let todoList = document.createElement("div");
+    todoList.id = "todoList";
+    todosContainer.appendChild(todoList);
 
     /* todos container styling */
     todosContainer.setAttribute("style", "padding: 20px;" +

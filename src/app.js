@@ -1,54 +1,53 @@
-let todos = ["todo one", "todo two", "todo three"];
-
-export function getToDos () {
-    let currentTodos = todos;
-    console.log(currentTodos);
-    return currentTodos;
-}
-
-export function buildToDo() {
-    function getTitle() {
-        console.log("title test");
-    }
-
-    function getDescription() {
-        console.log("description");
-    }
-
-    function getDate() {
-        console.log("date/time");
-        // use Date.now and a library to parse time
-    }
-
-    function getPriority() {
-        console.log("high priority");
-    }
-
-    function getNotes() {
-        console.log("notes");
-    }
-
-    function getChecklist() {
-        console.log("checklist?");
-    }
+let app = { 
+    todos: ["todo one", "todo two", "todo three"],
     
-    function createToDo() {
-        return {
-          title: getTitle(),
-          description: getDescription(),
-          dueDate: getDate(),
-          priority: getPriority(),
-          notes: getNotes(),
-          checklist: getChecklist(),
-        };
+    // getTodos: function () {
+    // let currentTodos = todos;
+    // return currentTodos;
+    // },
+
+    buildTodo: function () {
+        function getTitle() {
+            console.log("title test");
+        }
+
+        function getDescription() {
+            console.log("description");
+        }
+
+        function getDate() {
+            console.log("date/time");
+            // use Date.now and a library to parse time
+        }
+
+        function getPriority() {
+            console.log("high priority");
+        }
+
+        function getNotes() {
+            console.log("notes");
+        }
+
+        function getChecklist() {
+            console.log("checklist?");
+        }
+        
+        function createToDo() {
+            return {
+            title: getTitle(),
+            description: getDescription(),
+            dueDate: getDate(),
+            priority: getPriority(),
+            notes: getNotes(),
+            checklist: getChecklist(),
+            };
+        }
+
+        return todos.push(createToDo());
     }
-     
-    console.log(Date.now());
-    console.log(todos);
-    return todos.push(createToDo());
 }
 
-
+export {app};
 
 // console versions first.
 
