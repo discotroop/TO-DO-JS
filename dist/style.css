@@ -1,3 +1,69 @@
+body {
+    font-family: arial;
+}
+
+#content>div {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr); 
+    grid-template-rows: repeat(10, 1fr);height: 100vh;
+}
+
+#sidebar {
+    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 10;
+}
+
+#sidebarHeader {
+    display: grid;
+    grid-template-columns: 5;
+    grid-template-rows: 1;
+}
+
+#sidebarHeader>h3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#sidebarHeader>button {
+    grid-column-start: 4;
+}
+
+#sidebarProjects {
+    padding: 20px;
+}
+
+button {
+    background-color: whitesmoke;
+    border-radius: 25px;
+    border-style: solid;
+}
+
+button:hover {
+    background-color:lightsteelblue;}
+
+.project {
+    padding: 3%;}
+
+.project:hover {
+    background-color: #DEB0C4;
+    border-radius: 25px; text-align: center;
+    width: 75%;
+}
+
+#todosContainer {
+    padding: 20px;
+    grid-column-start: 5;
+    grid-column-end: 15;
+    grid-row-start: 1;
+    grid-row-end: 10;
+    border-left-style: solid;
+    border-left-color: black;
+    border-left-width: 3px;
+}
+
 .todo {
     background-color: white;
     display: flex;
