@@ -4,6 +4,7 @@
   "description": "To Do List App in Vanilla JS",
   "main": "index.js",
   "dependencies": {
+    "date-fns": "^2.4.0",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9",
     "webpack-server": "^0.1.2"

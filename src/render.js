@@ -29,19 +29,18 @@ let render = {
     container: DOM.newTodoContainer,
     title: document.createElement("a"),
     
-    renderNewTodo: function () {
-        let container = document.querySelector("#newTodoContainer");
-        let tester = document.createElement("div");
-        this.title.id = "title";
-        this.title.innerText = "click me";
-        tester.innerText = "testing";
-        container.appendChild(tester);
-        tester.appendChild(this.title);
-        this.title.addEventListener("click", function () {
-            this.title.backgroundColor = "blue";
-        })
+    // renderNewTodo: function () {
+    //     let container = document.querySelector("#newTodoContainer");
+    //     let tester = document.createElement("div");
+    //     this.title.id = "title";
+    //     this.title.innerText = "click me";
+    //     container.appendChild(tester);
+    //     tester.appendChild(this.title);
+    //     this.title.addEventListener("click", function () {
+    //         this.title.backgroundColor = "blue";
+    //     })
 
-    }
+    //}
 }
 
 export {render};

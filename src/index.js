@@ -4,14 +4,14 @@ import{app} from "./app.js"
 import{handlers} from "./handlers.js";
 DOM.init();
 
-app.buildTodo();
-app.buildTodo();
-app.buildTodo();
+import { formatDistance, subDays } from 'date-fns';
 
-render.logger();
+let testing = formatDistance(subDays(new Date(), 3), new Date());
+console.log("test", testing);
 
 render.renderToDos(app.todos);
 handlers.newToDoButton();
 handlers.submitTodo();
 
 render.renderNewTodo();
+

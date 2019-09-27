@@ -1,5 +1,5 @@
 let app = { 
-    todos: [],
+    todos: ["sample"],
 
     getTitle: function () {
         let title = document.querySelector("#title");
