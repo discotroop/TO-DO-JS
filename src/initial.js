@@ -2,6 +2,7 @@ let DOM = {
     /* grab screen */
     content: document.querySelector("#content"),
     container: document.createElement("div"),
+    newTodoContainer: document.createElement("div"),
 
     /* build sidebar */
     sidebar: document.createElement("div"),
@@ -17,24 +18,37 @@ let DOM = {
     todosTitle: document.createElement("h3"),
     todosButton: document.createElement("button"),
     todoList: document.createElement("div"),
- 
+
+    /* set ids for css */
     styleApp: function () {
         this.sidebar.id = "sidebar";
         this.sidebarHeader.id = "sidebarHeader";
         this.sidebarProjects.id = "sidebarProjects";
+        this.sidebarProjectsAll.setAttribute("class", "project");
         this.todosContainer.id = "todosContainer";
-        this.todosHeader.i
+        this.todosHeader.id = "todosHeader";
+        this.todosTitle.id = "todosTitle";
+        this.todosButton.id = "todosButton";
+        this.newTodoContainer.id = "newTodoContainer";
+        this.newTodoContainer.setAttribute("class", "invisible");
     },
 
     drawApp: function () {
-        this.todosContainer.innerText = "testing";
-
+        /* set text */
         this.sidebarTitle.innerText = "Projects";
         this.sidebarButton.innerText = "New";
+        this.sidebarProjectsAll.innerText = "All";
+        this.todosTitle.innerText = "To Do";
+        this.todosButton.innerText = "New";
 
         this.content.appendChild(this.container);
+        /* new todo container might need to be moved */
+        /* display none !important worked */
+        // this.content.appendChild(this.newTodoContainer);
+
         this.container.appendChild(this.sidebar);
 
+        /* draw sidebar */
         this.sidebar.appendChild(this.sidebarHeader);
         this.sidebarHeader.appendChild(this.sidebarTitle);
         this.sidebarHeader.appendChild(this.sidebarButton);
@@ -52,22 +66,8 @@ let DOM = {
     },
 
     init: function () {
-        // this.styleApp();
         this.drawApp();
     }
 }
 
 export {DOM};
-
-
-// this.todosHeader.setAttribute("style", "display: grid;" +
-// "grid-template-columns: 11;" +
-// "grid-template-rows: 1;"
-// );
-// this.todosTitle.setAttribute("style", "grid-column-start: 5;" +
-// "grid-column-end: 5;"
-// );
-// this.todosButton.setAttribute("style", "grid-column-start: 9;" +
-// "grid-column-end: 11;"
-// );
-// this.todosButton.setAttribute("class", "button");

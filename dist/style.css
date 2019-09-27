@@ -64,12 +64,29 @@ button:hover {
     border-left-width: 3px;
 }
 
+#todosHeader {
+    display: grid;
+    grid-template-columns: 11;
+    grid-template-rows: 1;
+}
+
+#todosTitle {
+    grid-column-start: 5;
+    grid-column-end: 5;
+}
+
+#todosButton {
+    grid-column-start: 9;
+    grid-column-end: 11;
+}
+
 .todo {
     background-color: white;
     display: flex;
     align-items: center;
     font-size: 20px;
     margin-top: 10px;
+    font-family: inherit;
 }
 
 .todo:hover {
@@ -93,6 +110,15 @@ button:hover {
     border-color: black;
 }
 
+#newTodoContainer {
+    display: none;
+    /* display: none !important works */
+}
+
+.invisible {
+    display: none;
+    z-index: -10;
+}
 
 
 #colorReference {

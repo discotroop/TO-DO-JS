@@ -1,49 +1,46 @@
 let app = { 
-    todos: ["todo one", "todo two", "todo three"],
-    
-    // getTodos: function () {
-    // let currentTodos = todos;
-    // return currentTodos;
-    // },
+    todos: [],
 
-    buildTodo: function () {
-        function getTitle() {
-            console.log("title test");
-        }
+    getTitle: function () {
+        let title = document.querySelector("#title");
+        let result = title.innerText;
+        return result;
+    },
 
-        function getDescription() {
-            console.log("description");
-        }
+    getDescription: function () {
+        let description = document.querySelector("#description");
+        let result = description.innerText;
+        return result;
+    },
 
-        function getDate() {
-            console.log("date/time");
-            // use Date.now and a library to parse time
-        }
+    getDate: function () {
+        return "tbd";
+    },
 
-        function getPriority() {
-            console.log("high priority");
-        }
+    getPriority: function () {
+        return "tbd";
+    },
 
-        function getNotes() {
-            console.log("notes");
-        }
+    getNotes: function () {
+        return "tbd";
+    },
 
-        function getChecklist() {
-            console.log("checklist?");
-        }
-        
-        function createToDo() {
-            return {
-            title: getTitle(),
-            description: getDescription(),
-            dueDate: getDate(),
-            priority: getPriority(),
-            notes: getNotes(),
-            checklist: getChecklist(),
+    getChecklist: function () {
+        return "might do later"
+    },  
+
+    createTodo: function () {
+        return {
+            title: this.getTitle(),
+            description: this.getDescription(),
+            dueDate: this.getDate(),
+            priority: this.getPriority(),
+            notes: this.getNotes(),
+            checklist: this.getChecklist(),
             };
-        }
-
-        return todos.push(createToDo());
+        },
+    buildTodo: function () {
+        return this.todos.push(this.createTodo());
     }
 }
 

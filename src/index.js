@@ -1,9 +1,17 @@
 import{DOM} from "./initial.js";
-DOM.init();
-// drawApp();
-import {renderToDos} from "./render.js";
-
+import {render} from "./render.js";
 import{app} from "./app.js"
+import{handlers} from "./handlers.js";
+DOM.init();
 
+app.buildTodo();
+app.buildTodo();
+app.buildTodo();
 
-renderToDos(app.todos);
+render.logger();
+
+render.renderToDos(app.todos);
+handlers.newToDoButton();
+handlers.submitTodo();
+
+render.renderNewTodo();
