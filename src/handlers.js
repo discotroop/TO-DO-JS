@@ -13,8 +13,6 @@ let handlers = {
             app.buildTodo();
             render.renderToDos(app.todos);
         });
-    console.log("test", todos);
-    console.log("length", todos.length);
     },
 
     submitTodo: function () {
@@ -22,6 +20,17 @@ let handlers = {
         submit.addEventListener("click", function() {
             app.buildTodo();
             render.renderToDos(app.todos);
+            handlers.expandTodo();
+        })
+    },
+    /* to do expansion */
+    expandTodo: function () {
+        let todos = document.querySelectorAll(".todo");
+        todos.forEach(function(todo) {
+            todo.addEventListener("click", function (e) {
+                console.log(e.target.data);
+                render.renderTodoDetails(e.target.data);
+            })
         })
     }
 }
