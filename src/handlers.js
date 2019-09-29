@@ -21,6 +21,7 @@ let handlers = {
             app.buildTodo();
             render.renderToDos(app.todos);
             handlers.expandTodo();
+            console.log(app.todos)
         })
     },
     /* to do expansion */

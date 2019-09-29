@@ -18,8 +18,9 @@ let app = {
     },
 
     getPriority: function () {
-        return "tbd";
-    },
+        let priority = document.querySelector("#priority");
+        console.log(priority);
+        },
 
     getNotes: function () {
         return "tbd";

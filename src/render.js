@@ -33,6 +33,7 @@ let render = {
         let todos = currentTodos;
         let todoList = DOM.todoList;
         todoList.innerHTML = "";
+        console.log(app.todos[4]);
 
         for (let i = 0; i < todos.length; i++) {
             let todo = this.createTodoElement();
@@ -43,6 +44,10 @@ let render = {
         }
     },
 
+    createPriority: function () {
+
+    },
+
     createTodoDetails: function (index) {
         let todo = app.todos[index];
         let detailsContainer = document.createElement("div");
@@ -50,13 +55,15 @@ let render = {
         let description = document.createElement("div");
         let date = document.createElement('div');
         let title = document.createElement('div');
+        let priority = document.createElement("div");
         description.innerText = todo.description;
         date.innerText = todo.date;
         title.innerText = todo.title;
+        priority.innerText = todo.priority;
 
         detailsContainer.setAttribute("class", "details");
 
-        this.appender(detailsContainer, check, title, description);
+        this.appender(detailsContainer, check, title, description,priority);
         return detailsContainer;
     },
 
