@@ -1,5 +1,5 @@
 let app = { 
-    todos: ["sample"],
+    todos: ["sample", "1", "2"],
 
     getTitle: function () {
         let title = document.querySelector("#title");
@@ -41,6 +41,11 @@ let app = {
         },
     buildTodo: function () {
         return this.todos.push(this.createTodo());
+    },
+
+    deleteTodo: function (index) {
+        this.todos.splice(index, 1);
+        console.log(this.todos.length);
     }
 }
 

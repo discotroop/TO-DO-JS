@@ -32,6 +32,17 @@ let handlers = {
                 render.renderTodoDetails(e.target.data);
             })
         })
+    },
+
+    deleteTodo: function ()  {
+        let button = document.querySelector("#delete");
+        let index = document.querySelector("#num");
+        button.addEventListener("click", function () {
+            console.log("delete");
+            console.log(index.valueAsNumber);
+            app.deleteTodo(index.valueAsNumber);
+            render.renderToDos(app.todos);
+        })
     }
 }
 

@@ -2,16 +2,20 @@ import {DOM} from "./initial.js";
 import {app} from "./app.js";
 
 let render = {
+    /* helper functions */
     logger: function () {
         console.log("test");
     },
 
     appender: function (parent, ...args) {
         for (let i = 1; i < arguments.length; i++) {
-            console.log(arguments[i]);
             parent.appendChild(arguments[i]);
         }
+        // return parent;
     },
+
+    /* maybe write a div creator function as well */
+
 
     createCheckElement: function () {
         let check = document.createElement("div");
@@ -51,7 +55,6 @@ let render = {
         title.innerText = todo.title;
 
         detailsContainer.setAttribute("class", "details");
-        // detailsContainer.appendChild(this.createCheckElement(), description, date);
 
         this.appender(detailsContainer, check, title, description);
         return detailsContainer;

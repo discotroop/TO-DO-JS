@@ -7,6 +7,8 @@ DOM.init();
 render.renderToDos(app.todos);
 handlers.newToDoButton();
 handlers.submitTodo();
+handlers.deleteTodo();
 
-handlers.expandTodo();
+// handlers.expandTodo();
 
+// app.deleteTodo(1);

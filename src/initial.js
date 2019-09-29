@@ -33,6 +33,19 @@ let DOM = {
         this.newTodoContainer.setAttribute("class", "invisible");
     },
 
+    temporaryDelete: function () {
+        let cont = document.createElement("div");
+        let num = document.createElement("input");
+        let button = document.createElement("button");
+        num.setAttribute("type", "number");
+        num.id = "num";
+        button.id = "delete";
+        button.innerText = "delete";
+        cont.appendChild(num);
+        cont.appendChild(button);
+        return cont;
+    },
+
     drawApp: function () {
         /* set text */
         this.sidebarTitle.innerText = "Projects";
@@ -63,6 +76,10 @@ let DOM = {
         this.todosContainer.appendChild(this.todoList);
 
         this.styleApp();
+        /* temp delete */
+
+        let temp = this.temporaryDelete();
+        this.container.appendChild(temp);
     },
 
     init: function () {
