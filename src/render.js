@@ -2,50 +2,52 @@ import {DOM} from "./initial.js";
 import {app} from "./app.js";
 
 let render = {
+    currentTodos: app.todos,
     /* helper functions */
     logger: function () {
         console.log("test");
     },
-
     appender: function (parent, ...args) {
         for (let i = 1; i < arguments.length; i++) {
             parent.appendChild(arguments[i]);
         }
-        // return parent;
+        /* return parent; */
     },
-
-    /* maybe write a div creator function as well */
-
-
     createCheckElement: function () {
         let check = document.createElement("div");
         check.setAttribute("class", "check");
         return check;
     },
-
+    createPriorityColor: function (todo) {
+        console.log(todo.priorityValue);
+        if (todo.priorityValue === "1") {
+            return "high";
+        } if (todo.priorityValue === "2") {
+            return "medium";
+        } else {
+            return "low";
+        }
+    },
     createTodoElement: function () {
         let todo = document.createElement("div");
         todo.setAttribute("class", "todo");
         todo.append(this.createCheckElement());
         return todo;
     },
-    renderToDos: function (currentTodos) {
-        let todos = currentTodos;
+
+    renderToDos: function () {
+        let todos = this.currentTodos;
         let todoList = DOM.todoList;
         todoList.innerHTML = "";
-        console.log(app.todos[4]);
 
         for (let i = 0; i < todos.length; i++) {
             let todo = this.createTodoElement();
+            todo.classList.add(this.createPriorityColor(todos[i]));
             let todoText = todos[i].title;
             todo.data = i; /* links index to DOM */
             todo.append(todoText);
             todoList.appendChild(todo)
         }
-    },
-
-    createPriority: function () {
-
     },
 
     createTodoDetails: function (index) {
@@ -70,6 +72,8 @@ let render = {
     renderTodoDetails: function (index) {
         let todos = document.querySelectorAll(".todo");
         let clickedTodo = todos[index];
+        console.log(index);
+        console.log(clickedTodo);
         clickedTodo.innerHTML = "";
         clickedTodo.classList.remove("todo");
         clickedTodo.appendChild(this.createTodoDetails(index));

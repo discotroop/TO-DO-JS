@@ -1,5 +1,5 @@
 let app = { 
-    todos: ["sample", "1", "2"],
+    todos: [],
 
     getTitle: function () {
         let title = document.querySelector("#title");
@@ -19,16 +19,16 @@ let app = {
 
     getPriority: function () {
         let priority = document.querySelector("#priority");
-        console.log(priority);
+        let priorityText = priority.selectedOptions[0].innerText;
+        return priorityText;
         },
 
-    getNotes: function () {
-        return "tbd";
-    },
-
-    getChecklist: function () {
-        return "might do later"
-    },  
+    getPriorityValue: function () {
+        let priority = document.querySelector("#priority");
+        let optionValue = priority.selectedOptions[0].value;
+        console.log(optionValue);
+        return optionValue;
+        },
 
     createTodo: function () {
         return {
@@ -36,8 +36,7 @@ let app = {
             description: this.getDescription(),
             dueDate: this.getDate(),
             priority: this.getPriority(),
-            notes: this.getNotes(),
-            checklist: this.getChecklist(),
+            priorityValue: this.getPriorityValue(),
             };
         },
     buildTodo: function () {
@@ -46,7 +45,6 @@ let app = {
 
     deleteTodo: function (index) {
         this.todos.splice(index, 1);
-        console.log(this.todos.length);
     }
 }
 

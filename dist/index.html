@@ -11,15 +11,46 @@
       <div id="title" contenteditable="true">Title</div> 
       <div id="description" contenteditable="true">Description</div>
       <div id="date" contenteditable="true">DATE</div> 
-      <input list="priority" type ="test">
-      <datalist id="priority">
-        <option value="High">High</option>
-        <option value="Medium">Medium</option>
-        <option value="Low">Low</option>
-      </datalist>
+      <select name="priority" id="priority">
+        <option value=1>High</option>
+        <option value=2>Medium</option>
+        <option value=3>Low</option>
+      </select>
+     
       <button id="submit">add</button>
     </div>
-   
-    <!-- dtata lists https://helgesverre.com/blog/textbox-dropdown-html5/-->
+
+  <div style="height: 400px; width: 600px; display:flex;">
+    <div style="background-color:#DEB0C4; height: 150px; width: 150px;">#DEB0C4</div>
+    <div style="background-color:#C4DEB0; height: 150px; width: 150px;">#C4DEB0</div>
+    <div style="background-color:#B3B0DE; height: 150px; width: 150px;">#B3B0DE</div>
+    <div style="background-color:#B0DBDE; height: 150px; width: 150px;">#B0DBDE</div>
+    <div style="background-color:#DEB3B0; height: 150px; width: 150px;">#DEB3B0</div>
+    <div style="background-color:#DBDEB0; height: 150px; width: 150px;">#DBDEB0</div>
+    <div style="background-color:#DECAB0; height: 150xp; width: 150px;">#DECAB0</div>
+
     </body>
 <script src="main.js"></script>
+
+<!--
+ high --"background-color:#DEB3B0"
+ medium -- "background-color:#DBDEB0"
+ low -- "background-color:#C4DEB0"
+
+
+-->
+
+<!-- 
+background-color: #DEB0C4;
+background-color: #C4DEB0;
+
+/* analogous */
+background-color: #B3B0DE;
+background-color: #B0DBDE;
+
+/* split complements */
+background-color: #DEB3B0;
+background-color: #DBDEB0;
+
+/* Complementary */
+background-color: #DECAB0; -->

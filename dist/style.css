@@ -94,6 +94,21 @@ button:hover {
     border-radius: 25px;
 }
 
+.high {
+    background-color: #DEB3B0;
+    border-radius: 25px;
+}
+
+.medium {
+    background-color: #DBDEB0;
+    border-radius: 25px;
+}
+
+.low {
+    background-color: #C4DEB0;
+    border-radius: 25px;
+}
+
 .check {
     height: 25px;
     width: 25px;

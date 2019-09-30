@@ -7,7 +7,6 @@ let handlers = {
         console.log(todos);
     },
     newToDoButton: function () {
-        //console.log(todos);
         let button = document.querySelector("#todosButton");
         button.addEventListener("click", function() {
             app.buildTodo();
@@ -21,7 +20,6 @@ let handlers = {
             app.buildTodo();
             render.renderToDos(app.todos);
             handlers.expandTodo();
-            console.log(app.todos)
         })
     },
     /* to do expansion */
@@ -29,7 +27,6 @@ let handlers = {
         let todos = document.querySelectorAll(".todo");
         todos.forEach(function(todo) {
             todo.addEventListener("click", function (e) {
-                console.log(e.target.data);
                 render.renderTodoDetails(e.target.data);
             })
         })
@@ -39,8 +36,6 @@ let handlers = {
         let button = document.querySelector("#delete");
         let index = document.querySelector("#num");
         button.addEventListener("click", function () {
-            console.log("delete");
-            console.log(index.valueAsNumber);
             app.deleteTodo(index.valueAsNumber);
             render.renderToDos(app.todos);
         })

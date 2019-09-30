@@ -12,3 +12,10 @@ handlers.deleteTodo();
 // handlers.expandTodo();
 
 // app.deleteTodo(1);
+
+
+// To Do
+// set priority
+// set date/time
+    // use moment.js 
+    /// https://www.sitepoint.com/managing-dates-times-using-moment-js/
