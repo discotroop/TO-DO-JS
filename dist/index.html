@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
     <div id="content"></div>
@@ -10,7 +12,15 @@
       <!-- maybe use anchor tags later ?-->
       <div id="title" contenteditable="true">Title</div> 
       <div id="description" contenteditable="true">Description</div>
-      <div id="date" contenteditable="true">DATE</div> 
+      <input type="text" id="datepicker">
+      <script type="text/javascript">
+        $(function() {
+          $("#datepicker").datepicker({
+           numberOfMonths: 1
+          }); 
+        });
+      </script>
+
       <select name="priority" id="priority">
         <option value=1>High</option>
         <option value=2>Medium</option>

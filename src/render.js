@@ -19,7 +19,6 @@ let render = {
         return check;
     },
     createPriorityColor: function (todo) {
-        console.log(todo.priorityValue);
         if (todo.priorityValue === "1") {
             return "high";
         } if (todo.priorityValue === "2") {
@@ -59,21 +58,20 @@ let render = {
         let title = document.createElement('div');
         let priority = document.createElement("div");
         description.innerText = todo.description;
-        date.innerText = todo.date;
+        console.log(todo.dueDate)
+        date.innerText = todo.dueDate;
         title.innerText = todo.title;
         priority.innerText = todo.priority;
 
         detailsContainer.setAttribute("class", "details");
 
-        this.appender(detailsContainer, check, title, description,priority);
+        this.appender(detailsContainer, check, title, description, date, priority);
         return detailsContainer;
     },
 
     renderTodoDetails: function (index) {
         let todos = document.querySelectorAll(".todo");
         let clickedTodo = todos[index];
-        console.log(index);
-        console.log(clickedTodo);
         clickedTodo.innerHTML = "";
         clickedTodo.classList.remove("todo");
         clickedTodo.appendChild(this.createTodoDetails(index));

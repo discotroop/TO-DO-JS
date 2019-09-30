@@ -14,7 +14,10 @@ let app = {
     },
 
     getDate: function () {
-        return "tbd";
+        let dueDate = document.querySelector("#datepicker");
+        let date = dueDate.value;
+        console.log(typeof date);
+        return date;
     },
 
     getPriority: function () {
@@ -26,7 +29,6 @@ let app = {
     getPriorityValue: function () {
         let priority = document.querySelector("#priority");
         let optionValue = priority.selectedOptions[0].value;
-        console.log(optionValue);
         return optionValue;
         },
 
@@ -49,11 +51,3 @@ let app = {
 }
 
 export {app};
-
-// console versions first.
-
-// needs to export and array of objects that make up the to do list.
-    // objects need data - corresponds to index
-    // 
-
-// needs factory function/constructor to build objects.
